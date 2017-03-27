@@ -45,6 +45,11 @@ gem 'carrierwave', '~> 0.11.2'
 gem 'cloudinary'
 
 
+# Faker for seeding
+gem 'faker'
+
+
+
 
  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
