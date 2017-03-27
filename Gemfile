@@ -28,6 +28,8 @@ gem 'rack-cors'
 
 
 
+gem 'pg'
+
 gem 'simple_command'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
