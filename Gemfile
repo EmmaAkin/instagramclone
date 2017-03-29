@@ -49,6 +49,8 @@ gem 'cloudinary'
 gem 'faker'
 
 
+#Adding Responders for json redirecting
+gem 'responders'
 
 
  gem 'wdm', '>= 0.1.0' if Gem.win_platform?

@@ -1,4 +1,4 @@
-class RelationshipsController < ApplicationController
+class RelationshipsController < BaseController
   before_action :set_relationship, only: [:show, :update, :destroy]
 
   # # GET /relationships
