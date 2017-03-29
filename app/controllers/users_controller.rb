@@ -5,11 +5,16 @@ class UsersController < BaseController
   # GET /users.json
   def index
     @users = User.all
+
+    respond_with @users
+
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+
+    respond_with @users
   end
 
   # POST /users
@@ -37,8 +42,31 @@ class UsersController < BaseController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
+    respond_with @user.destroy, status: :ok
   end
+
+  #Create the relationship between users
+
+  def following
+      @title = "Following"
+      @user = User.find(params[:id])
+      @users = @user.following
+
+      respond_with @users
+    end
+
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers
+
+    respond_with @users
+  end
+
+
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

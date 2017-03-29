@@ -38,6 +38,7 @@ def create_user_profile
   dummy.each do|user|
 
       dummy_user = User.create!(
+        full_name: (user["firstname"]).to_s + " " + (user["lastname"]).to_s,
         username: (user["firstname"]).to_s,
         email: (user["email"]).to_s,
         password: (user["password"]).to_s,
