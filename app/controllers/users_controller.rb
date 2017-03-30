@@ -6,7 +6,7 @@ class UsersController < BaseController
   def index
     @users = User.all
 
-    respond_with @users
+    render json: @users
 
   end
 
